@@ -6,13 +6,5 @@
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
     "build:dev": "rm -rf dist && webpack --config webpack.staging.js"
-  },
-  "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@types/react-dom": "^18.0.11",
-    "antd": "^5.2.2",
-    "@ant-design/pro-components": "^2.3.57",
-    "react-router-dom": "^6.8.1"
   }
 }
