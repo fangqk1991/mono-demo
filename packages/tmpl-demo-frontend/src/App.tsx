@@ -1,6 +1,6 @@
 import React from 'react'
 import { ErrorBoundary } from '@ant-design/pro-components'
-import { VisitorProvider } from '@web/react-kit'
+import { VisitorProvider } from '@fangcha/react'
 import { RouterProvider } from 'react-router-dom'
 import { MyRouter } from './core/MyRouter'
 

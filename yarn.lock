@@ -1288,6 +1288,18 @@
     lodash "^4.17.15"
     tslib "^2.3.1"
 
+"@fangcha/react@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@fangcha/react/-/react-0.2.2.tgz#d4207e984fbf1eadb291a33a619ba8efd370b370"
+  integrity sha512-21gDrClUStwtmZVaeSmIxnjNVre7v4dxhBnGw+qjzM7J0XOVG9lipR9rClgqCcFQQahBR0FSjEowyMmIE26CUA==
+  dependencies:
+    "@ant-design/pro-components" "^2.3.57"
+    "@types/react-dom" "^18.0.11"
+    antd "^5.2.2"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-router-dom "^6.8.1"
+
 "@fangcha/router@^0.27.0":
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/@fangcha/router/-/router-0.27.0.tgz#4c0ad8be5b9a3173738b0ffdeec1a5f40ed16323"
@@ -1318,10 +1330,10 @@
     moment "^2.29.4"
     uuid "^9.0.0"
 
-"@fangcha/webpack@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@fangcha/webpack/-/webpack-0.13.1.tgz#c7b2936b6f7514744256eb32b0cc17bd2b05cb76"
-  integrity sha512-bHV8KJbM5VuLX3WJQDREkMmiDEPQLf9q9KUAUxtgHNHZZLlLqrLAZ3bEHqV0kDjJSbe0/O7oqCzcQczklo/X9Q==
+"@fangcha/webpack@^0.14.1":
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/@fangcha/webpack/-/webpack-0.14.1.tgz#c88539f6218c20d779e2cae0be7f79246715508d"
+  integrity sha512-52xGdbtSwPiz4HCZIuBIcKv+OYo4744QT3wJT9wM0ylIh7OJyPrB7eEv4lMKLl48acDNLrVcgvMPRsTeWlbSBA==
   dependencies:
     "@babel/core" "^7.8.4"
     "@babel/plugin-proposal-decorators" "^7.8.3"

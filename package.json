@@ -23,14 +23,9 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@types/react-dom": "^18.0.11",
-    "antd": "^5.2.2",
-    "@ant-design/pro-components": "^2.3.57",
-    "react-router-dom": "^6.8.1",
+    "@fangcha/react": "^0.2.2",
     "@fangcha/eslint": "^0.5.0",
-    "@fangcha/webpack": "^0.13.1",
+    "@fangcha/webpack": "^0.14.1",
     "@types/assert": "^1.4.6",
     "@types/lodash": "^4.14.154",
     "@types/mocha": "^10.0.1",

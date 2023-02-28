@@ -1,9 +1,8 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom'
 import React from 'react'
 import { MainLayout } from './MainLayout'
-import { ErrorBoundary } from '@ant-design/pro-components'
-import { RouteErrorBoundary } from './RouteErrorBoundary'
 import { Button } from 'antd'
+import { RouteErrorBoundary } from '@fangcha/react'
 
 export const MyRouter = createBrowserRouter([
   {
