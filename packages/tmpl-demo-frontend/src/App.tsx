@@ -1,8 +1,8 @@
 import React from 'react'
 import { ErrorBoundary } from '@ant-design/pro-components'
-import { VisitorProvider } from '@fangcha/react'
 import { RouterProvider } from 'react-router-dom'
-import { MyRouter } from './core/MyRouter'
+import { MyRouter } from './MyRouter'
+import { VisitorProvider } from '@fangcha/auth-react'
 
 export const App: React.FC = () => {
   return (

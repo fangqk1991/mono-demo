@@ -16,7 +16,7 @@ module.exports = {
       tokenPath: '/api/v1/oauth/token',
       logoutPath: '/api/v1/logout',
       scope: 'basic',
-      callbackUri: 'http://localhost:2399/api/v1/handleSSO',
+      callbackUri: 'http://localhost:2399/api-302/auth-sdk/v1/handle-sso',
       userInfoURL: 'https://sso.staging.fangcha.net/api/v1/oauth/user-info',
     },
   },

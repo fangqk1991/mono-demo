@@ -1,8 +1,8 @@
 import { TmplDemoConfig } from '../TmplDemoConfig'
 import { GlobalAppConfig } from 'fc-config'
 import { AdminUserPlugin } from '@web/backend-kit'
-import { TypicalSsoSdkPlugin } from '@fangcha/backend-kit/lib/sso'
 import { WebApp } from '@fangcha/backend-kit/lib/router'
+import { SsoSdkPlugin } from '@fangcha/web-auth-sdk'
 
 const app = new WebApp({
   env: GlobalAppConfig.Env,
@@ -18,7 +18,13 @@ const app = new WebApp({
     },
   },
   plugins: [
-    TypicalSsoSdkPlugin(TmplDemoConfig.adminSSO),
+    SsoSdkPlugin({
+      ssoAuth: TmplDemoConfig.adminSSO,
+      jwtOptions: {
+        jwtKey: 'tmpl-demo_token_jwt',
+        jwtSecret: TmplDemoConfig.adminJwtSecret,
+      },
+    }),
     AdminUserPlugin({
       applyToSession: true,
     }),

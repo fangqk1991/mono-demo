@@ -13,7 +13,7 @@
     "suppressExcessPropertyErrors": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["dom", "es2015"],
+    "lib": ["dom", "dom.iterable", "es2015"],
     "module": "esnext",
     "outDir": "build",
     "target": "es6",

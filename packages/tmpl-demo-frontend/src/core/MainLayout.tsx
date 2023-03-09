@@ -3,8 +3,9 @@ import { PageContainer, ProLayout } from '@ant-design/pro-layout'
 import React from 'react'
 import { ConfigProvider, Dropdown } from 'antd'
 import { MyMenu } from './MyMenu'
-import { useVisitorCtx } from '@fangcha/react'
+import { useVisitorCtx } from '@fangcha/auth-react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { WebAuthApis } from '@fangcha/sso-models'
 
 export const MainLayout: React.FC = () => {
   const visitorCtx = useVisitorCtx()
@@ -49,7 +50,7 @@ export const MainLayout: React.FC = () => {
                       key: 'logout',
                       label: 'Logout',
                       onClick: () => {
-                        window.location.href = '/api/v1/logout'
+                        window.location.href = WebAuthApis.RedirectLogout.route
                       },
                     },
                   ],
