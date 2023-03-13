@@ -1,6 +1,5 @@
 import { TmplDemoConfig } from '../TmplDemoConfig'
 import { GlobalAppConfig } from 'fc-config'
-import { AdminUserPlugin } from '@web/backend-kit'
 import { WebApp } from '@fangcha/backend-kit/lib/router'
 import { SsoSdkPlugin } from '@fangcha/web-auth-sdk'
 
@@ -24,9 +23,6 @@ const app = new WebApp({
         jwtKey: 'tmpl-demo_token_jwt',
         jwtSecret: TmplDemoConfig.adminJwtSecret,
       },
-    }),
-    AdminUserPlugin({
-      applyToSession: true,
     }),
   ],
 
