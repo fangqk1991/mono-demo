@@ -28,8 +28,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@fangcha/react": "^0.6.0",
-    "@fangcha/admin-react": "^0.1.0",
+    "@fangcha/react": "^0.7.0",
     "@fangcha/auth-react": "^0.9.0",
     "@fangcha/eslint": "^0.8.0",
     "@fangcha/webpack": "^0.15.0",

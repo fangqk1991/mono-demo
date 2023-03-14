@@ -2,12 +2,17 @@ import { UserOutlined } from '@ant-design/icons'
 import { PageContainer, ProLayout } from '@ant-design/pro-layout'
 import React from 'react'
 import { ConfigProvider, Dropdown } from 'antd'
-import { MyMenu } from './MyMenu'
 import { useVisitorCtx } from '@fangcha/auth-react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { WebAuthApis } from '@fangcha/sso-models'
+import { Route } from '@ant-design/pro-layout/es/typing'
 
-export const MainLayout: React.FC = () => {
+interface Props {
+  appName: string
+  menu: Route
+}
+
+export const MainLayout: React.FC<Props> = ({ appName, menu }) => {
   const visitorCtx = useVisitorCtx()
 
   const { userInfo } = visitorCtx
@@ -25,11 +30,12 @@ export const MainLayout: React.FC = () => {
     >
       <ProLayout
         logo={null}
-        title='TmplDemo'
+        title={appName}
         fixSiderbar={true}
         layout='mix'
-        splitMenus={true}
-        route={MyMenu}
+        splitMenus={false}
+        defaultCollapsed={false}
+        route={menu}
         location={{
           pathname: location.pathname,
         }}
@@ -89,13 +95,13 @@ export const MainLayout: React.FC = () => {
           return []
         }}
         menuItemRender={(item, dom) => (
-          <div
+          <a
             onClick={() => {
               navigate(item.path || '/')
             }}
           >
             {dom}
-          </div>
+          </a>
         )}
       >
         <PageContainer

@@ -1,14 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom'
 import React from 'react'
-import { MainLayout } from './core/MainLayout'
+import { MainLayout } from '../core/MainLayout'
 import { RouteErrorBoundary } from '@fangcha/react'
 import { Button } from 'antd'
-import { HomeView } from './core/HomeView'
+import { HomeView } from '../core/HomeView'
+import { MyMenu } from './MyMenu'
 
 export const MyRouter = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />,
+    element: <MainLayout appName='TmplDemo' menu={MyMenu} />,
     errorElement: <RouteErrorBoundary />,
     children: [
       {
