@@ -2,18 +2,19 @@ import { UserOutlined } from '@ant-design/icons'
 import { PageContainer, ProLayout } from '@ant-design/pro-layout'
 import React from 'react'
 import { ConfigProvider, Dropdown } from 'antd'
-import { useVisitorCtx } from '@fangcha/auth-react'
+import { useSessionConfig, useVisitorCtx } from '@fangcha/auth-react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { WebAuthApis } from '@fangcha/sso-models'
 import { Route } from '@ant-design/pro-layout/es/typing'
 
 interface Props {
-  appName: string
+  appName?: string
   menu: Route
 }
 
 export const MainLayout: React.FC<Props> = ({ appName, menu }) => {
   const visitorCtx = useVisitorCtx()
+  const config = useSessionConfig()
 
   const { userInfo } = visitorCtx
 
@@ -24,13 +25,13 @@ export const MainLayout: React.FC<Props> = ({ appName, menu }) => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: 'rgb(221 115 164)',
+          colorPrimary: config.colorPrimary || '#0d6efd',
         },
       }}
     >
       <ProLayout
         logo={null}
-        title={appName}
+        title={appName || config.appName}
         fixSiderbar={true}
         layout='mix'
         splitMenus={false}

@@ -19,5 +19,9 @@ module.exports = {
       callbackUri: 'http://localhost:2399/api-302/auth-sdk/v1/handle-sso',
       userInfoURL: 'https://sso.staging.fangcha.net/api/v1/oauth/user-info',
     },
+    adminFrontendConfig: {
+      appName: 'TmplDemo Admin',
+      colorPrimary: 'rgb(221 115 164)',
+    },
   },
 }
