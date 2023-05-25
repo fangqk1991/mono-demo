@@ -2,13 +2,13 @@ import { TmplDemoConfig } from '../TmplDemoConfig'
 import { GlobalAppConfig } from 'fc-config'
 import { WebApp } from '@fangcha/backend-kit/lib/router'
 import { SsoSdkPlugin } from '@fangcha/web-auth-sdk'
-import { _FangchaState } from '@fangcha/backend-kit'
 
 const app = new WebApp({
   env: GlobalAppConfig.Env,
   tags: GlobalAppConfig.Tags,
   appName: 'tmpl-demo-admin',
   wecomBotKey: TmplDemoConfig.wecomBotKey,
+  frontendConfig: TmplDemoConfig.adminFrontendConfig,
   routerOptions: {
     baseURL: TmplDemoConfig.adminBaseURL,
     backendPort: TmplDemoConfig.adminPort,
@@ -26,12 +26,6 @@ const app = new WebApp({
       },
     }),
   ],
-
-  appDidLoad: async () => {
-    _FangchaState.frontendConfig = {
-      ...TmplDemoConfig.adminFrontendConfig,
-    }
-  },
   checkHealth: async () => {},
 })
 app.launch()
