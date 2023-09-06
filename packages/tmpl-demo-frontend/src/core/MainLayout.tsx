@@ -6,6 +6,7 @@ import { useSessionConfig, useVisitorCtx } from '@fangcha/auth-react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { WebAuthApis } from '@fangcha/sso-models'
 import { Route } from '@ant-design/pro-layout/es/typing'
+import { RouterLink } from '@fangcha/react'
 
 interface Props {
   appName?: string
@@ -95,15 +96,7 @@ export const MainLayout: React.FC<Props> = ({ appName, menu }) => {
         actionsRender={() => {
           return []
         }}
-        menuItemRender={(item, dom) => (
-          <a
-            onClick={() => {
-              navigate(item.path || '/')
-            }}
-          >
-            {dom}
-          </a>
-        )}
+        menuItemRender={(item, dom) => <RouterLink route={item.path || '/'}>{dom}</RouterLink>}
       >
         <PageContainer
           header={{

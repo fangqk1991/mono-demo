@@ -1390,12 +1390,12 @@
   resolved "https://registry.yarnpkg.com/@fangcha/app-error/-/app-error-1.6.0.tgz#43f74006049cb99b1ad6daa8364851cafb4dd631"
   integrity sha512-8X/WE1W+YRePXzlK8hALIkMNPsfB7fOydzsDHdjj9Gd19YWTF5Z4A8NTSQDAKvDrngFkh73aPWKUq12EXo2a7g==
 
-"@fangcha/app-models@0.2.0", "@fangcha/app-models@^0.2.0":
+"@fangcha/app-models@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@fangcha/app-models/-/app-models-0.2.0.tgz#2e7b74fb70baaf39005dfaf2468abed9fa972f60"
   integrity sha512-RMLU2nYAxCUra9NJttGpXOsG0uSLu+092FGwj2+V1z9VwrrJYS2sYi9gntZROcF51L0EpmCXQtNH2GYUDUiZww==
 
-"@fangcha/app-request-extensions@0.2.0", "@fangcha/app-request-extensions@^*":
+"@fangcha/app-request-extensions@^*", "@fangcha/app-request-extensions@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@fangcha/app-request-extensions/-/app-request-extensions-0.2.0.tgz#2cf6df01ab53ec1fc2427207759591ba1738c110"
   integrity sha512-cVsUPvwTz+Hu2GZ8nnGFOiO5oEC0daYyHZGZP0fUawMn2SH5Strvg6RNkfCkoVAyexpkeA1zMg4pt9DqclM3vw==
@@ -1405,16 +1405,6 @@
     "@fangcha/logger" "^*"
     "@fangcha/tools" "^*"
     log4js "^6.7.1"
-
-"@fangcha/app-request@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@fangcha/app-request/-/app-request-1.8.0.tgz#343d0df8fc71eb54f13aaf169448142132b6c517"
-  integrity sha512-QLzIv8IcKBl7vap/gmQMV2XWAa3cTjf34qBQVkqiJdGYP9ZygPYzPXsDCop1RXTASLqQRmmTxtERuBj2mMGbug==
-  dependencies:
-    "@fangcha/app-error" "1.6.0"
-    axios "^1.3.2"
-    form-data "^4.0.0"
-    qs "^6.11.0"
 
 "@fangcha/app-request@^*":
   version "1.7.0"
@@ -1426,7 +1416,17 @@
     form-data "^4.0.0"
     qs "^6.11.0"
 
-"@fangcha/assert@1.2.0", "@fangcha/assert@^*", "@fangcha/assert@^1.2.0":
+"@fangcha/app-request@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@fangcha/app-request/-/app-request-1.8.0.tgz#343d0df8fc71eb54f13aaf169448142132b6c517"
+  integrity sha512-QLzIv8IcKBl7vap/gmQMV2XWAa3cTjf34qBQVkqiJdGYP9ZygPYzPXsDCop1RXTASLqQRmmTxtERuBj2mMGbug==
+  dependencies:
+    "@fangcha/app-error" "1.6.0"
+    axios "^1.3.2"
+    form-data "^4.0.0"
+    qs "^6.11.0"
+
+"@fangcha/assert@^*", "@fangcha/assert@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@fangcha/assert/-/assert-1.2.0.tgz#fb54f1a023a773b3bf0b9ff876af36aaec7e1374"
   integrity sha512-4nXyDzSv3lqXUVrsKjknNVsUJhuSJFrZggz+Q/ioH+eynTYNY0gctWCMBS0EBrrOYbT58TYvhuEOjxBBFhczWw==
@@ -1445,21 +1445,20 @@
   dependencies:
     bootstrap "^5.1.3"
 
-"@fangcha/backend-kit@^0.62.0":
-  version "0.62.0"
-  resolved "https://registry.yarnpkg.com/@fangcha/backend-kit/-/backend-kit-0.62.0.tgz#68f2bfe3eb81c440791b25fdcde8751ede8406b9"
-  integrity sha512-F/wKcvWoPwzB502N6P4KUgXboO6dXR8tHg4icD0S//nYE7jAb2nfkb6nFm3tFKlhYi3qa4EDxTN+s0qY/uOXHg==
+"@fangcha/backend-kit@^0.63.0":
+  version "0.63.0"
+  resolved "https://registry.yarnpkg.com/@fangcha/backend-kit/-/backend-kit-0.63.0.tgz#feaddc36f756760d358e685b09b41179893e63bc"
+  integrity sha512-F6fRe5iqbvLxSRR/l0/7EdGIavLopE0EqAXZs6wI+aIW/OHqm00EiL1SXokoRM3O0vCHW1rwilDhqTvVtXQFQQ==
   dependencies:
-    "@fangcha/app-error" "1.6.0"
-    "@fangcha/app-models" "0.2.0"
-    "@fangcha/app-request" "1.8.0"
-    "@fangcha/app-request-extensions" "0.2.0"
-    "@fangcha/assert" "1.2.0"
-    "@fangcha/bot-kit" "0.1.0"
-    "@fangcha/tools" "1.25.2"
+    "@fangcha/app-error" "^1.6.0"
+    "@fangcha/app-models" "^0.2.0"
+    "@fangcha/app-request" "^1.8.0"
+    "@fangcha/app-request-extensions" "^0.2.0"
+    "@fangcha/assert" "^1.2.0"
+    "@fangcha/bot-kit" "^0.1.0"
     moment "^2.29.4"
 
-"@fangcha/bot-kit@0.1.0", "@fangcha/bot-kit@^0.1.0":
+"@fangcha/bot-kit@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@fangcha/bot-kit/-/bot-kit-0.1.0.tgz#24b969a2504a51dfccea57c5a88aa915ec8d215f"
   integrity sha512-XJUlQLYXJgosqShG/FytxA+xhkcqTylanR0ciKdpniyMeyiXNHsaoVUAUuG7rx5dDpNfnuJ48gGltNpXgXpBQg==
@@ -1496,10 +1495,10 @@
   dependencies:
     lodash "^4.17.15"
 
-"@fangcha/react@^0.28.0":
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/@fangcha/react/-/react-0.28.0.tgz#aa38bc9096fece86d4078b6225b937464ae40575"
-  integrity sha512-r1W5OsQcC8DZoS1CL3MRA73c4iuGxJ22PwlDu/lCv0HMvPX+RzCB0mxhcdgaC7h7tSfU7CA2sEV/LErH8p2C7A==
+"@fangcha/react@^0.33.0":
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/@fangcha/react/-/react-0.33.0.tgz#59dbb0a9885e8a31badc046b638b17937667b97f"
+  integrity sha512-21Y3rhvoimsF3DiI2zCtwwnU7tkfzQH7gi7gnhC7RMYnIOeJITmuPR7lTI7wq7/aKpycGujEXDUO4az8NYpdtQ==
   dependencies:
     "@ant-design/pro-components" "^2.4.1"
     "@emotion/react" "^11.10.6"
@@ -1565,7 +1564,15 @@
   resolved "https://registry.yarnpkg.com/@fangcha/swagger/-/swagger-0.1.1.tgz#18d35ecc106d90eeec6d7d9964ca776d95cbc878"
   integrity sha512-NOTpGTPvp2aLCD8EJ+cG/oCd17nl3nmsNV9leVSTq8/M+wNXiYbv21ftZSqHP7/pf9tA5gr9JghizkZI2z5Ing==
 
-"@fangcha/tools@1.25.2", "@fangcha/tools@^1.25.2":
+"@fangcha/tools@^*":
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/@fangcha/tools/-/tools-1.23.1.tgz#b353f557b79e485a04115ebb89a75074a4455e79"
+  integrity sha512-Gw929Qdwz+bEl6AGm9MDNwPxzF2IvmCj4LvznUIBwPYafZ89nzL1UJplHrLYQnTa7qQYWNMAsKrYYxVhe2D85w==
+  dependencies:
+    moment "^2.29.4"
+    uuid "^9.0.0"
+
+"@fangcha/tools@^1.25.2":
   version "1.25.2"
   resolved "https://registry.yarnpkg.com/@fangcha/tools/-/tools-1.25.2.tgz#085ccefc6af2efc4aea05c513ea8d225270eb835"
   integrity sha512-5X67S+UI1hlkMyTKN1boQJIq2SQwcpq2IEsQm6JMZAd79cRmx3dG5D8ma3e+5hxjlw9BLuGtp4zCQ5yiLNAyrg==
@@ -1573,10 +1580,10 @@
     moment "^2.29.4"
     uuid "^9.0.0"
 
-"@fangcha/tools@^*":
-  version "1.23.1"
-  resolved "https://registry.yarnpkg.com/@fangcha/tools/-/tools-1.23.1.tgz#b353f557b79e485a04115ebb89a75074a4455e79"
-  integrity sha512-Gw929Qdwz+bEl6AGm9MDNwPxzF2IvmCj4LvznUIBwPYafZ89nzL1UJplHrLYQnTa7qQYWNMAsKrYYxVhe2D85w==
+"@fangcha/tools@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@fangcha/tools/-/tools-1.31.0.tgz#88fcd998e255158502765e8b20a49e1ad2b9c950"
+  integrity sha512-9O+QxTHA3j1x7KU8TmGdWZX8YLNTZFL5orVZq6rbm9SHh272jxJF1xakJebPwtMq8CXjRuAYmH9WkHmXaekWew==
   dependencies:
     moment "^2.29.4"
     uuid "^9.0.0"
@@ -1586,10 +1593,10 @@
   resolved "https://registry.yarnpkg.com/@fangcha/web-auth-sdk/-/web-auth-sdk-0.8.0.tgz#e4b0c6cefe51b1d677a6f8e2f1893f225d6ff13a"
   integrity sha512-YjMe86f2yeZttSpRmMnz7aDrjvmXLwJxTXGsSuU+GlWLoLYci09urdOlyGMHeIXHZEGWSk7NwgUDh0nRVm6kfA==
 
-"@fangcha/webpack@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@fangcha/webpack/-/webpack-0.15.0.tgz#95b348127d9d6f1c037fab9a5e4c3e90f410cc25"
-  integrity sha512-QICcQKbCYRXtYvIfR2iYATFFw8Tv91/509JRUQeCLzX8NY/CfkxJXz53CFhpufaabXtu1YjRfi310SouDsSp/Q==
+"@fangcha/webpack@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@fangcha/webpack/-/webpack-0.16.0.tgz#c508ce7db556b1784aafc42ef4cebfb175abebe9"
+  integrity sha512-ET2TMG2Y1vgtDrD9o/RTKsYiNB2D+i7dPZdf3uSw5ys00TiLxUCKYDpUaAGM4zE9MwuZDGmeLIKWId75mqTBxQ==
   dependencies:
     "@babel/core" "^7.8.4"
     "@babel/plugin-proposal-decorators" "^7.8.3"
